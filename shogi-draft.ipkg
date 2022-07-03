@@ -1,0 +1,34 @@
+package shogi-draft
+
+authors = "gemmaro"
+license = "MIT"
+brief = "shogi library (draft)"
+
+depends = prelude
+        , base
+        , contrib
+
+modules = Shogi.Board
+        , Shogi.Color
+        , Shogi.Column
+        , Shogi.Coordinate
+        , Shogi.Csa
+        , Shogi.File
+        , Shogi.Hand
+        , Shogi.Kind
+        , Shogi.Pickup
+        , Shogi.Piece
+        , Shogi.Preset
+        , Shogi.Promote
+        , Shogi.Rank
+        , Shogi.Relative
+        , Shogi.Reverse
+        , Shogi.Row
+        , Shogi.Setting
+        , Shogi.Sfen
+        , Shogi.State
+        , Shogi.Territory
+        , Shogi.Tree
+        , Shogi.Vision
+
+sourcedir = "src"
