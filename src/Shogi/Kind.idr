@@ -1,6 +1,5 @@
 module Shogi.Kind
 
-import Data.Either
 import Data.Vect
 
 import Shogi.Rank
@@ -19,7 +18,7 @@ data Kind =
   Pawn   | PromotedPawn
 
 export
-kinds : Vect 14 Kind
+kinds : Vect ? Kind
 kinds =
   [ King
   , Rook   , Dragon
@@ -30,13 +29,6 @@ kinds =
   , Lance  , PromotedLance
   , Pawn   , PromotedPawn
   ]
-
-export
-illegalRank : Rank -> Kind -> Bool
-illegalRank r Knight = toFin r < 2
-illegalRank r Lance  = toFin r < 1
-illegalRank r Pawn   = toFin r < 1
-illegalRank _ _      = False
 
 export
 Eq Kind where

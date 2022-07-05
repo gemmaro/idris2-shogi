@@ -12,6 +12,3 @@ record Coordinate where
   constructor MkCoordinate
   file : File
   rank : Rank
-
-illegalRank : Coordinate -> Piece -> Bool
-illegalRank c p = illegalRank c.rank p.kind

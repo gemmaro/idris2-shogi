@@ -1,14 +1,23 @@
 package shogi
 
-version = 0.1.0
+version = 0.2.0
 authors = "gemmaro"
 license = "MIT"
 brief = "shogi library"
 
-depends = prelude
-        , base
-        , contrib
+depends = contrib
 
-modules = Shogi.Color
+modules = Shogi.Board
+        , Shogi.Color
+        , Shogi.Column
+        , Shogi.Coordinate
+        , Shogi.Deadend
+        , Shogi.File
+        , Shogi.Hand
+        , Shogi.Kind
+        , Shogi.Piece
+        , Shogi.Rank
+        , Shogi.Reverse
+        , Shogi.Row
 
 sourcedir = "src"

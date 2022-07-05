@@ -9,7 +9,7 @@ public export
 record Piece where
   constructor MkPiece
   color : Color
-  kind : Kind
+  kind  : Kind
 
 export
 isBlack : Piece -> Bool
@@ -22,4 +22,4 @@ isWhite = not . isBlack
 
 export
 Eq Piece where
-  (MkPiece color kind) == (MkPiece x y) = color == x && kind == y
+  (==) = (==) `on` (\p => (p.color, p.kind))

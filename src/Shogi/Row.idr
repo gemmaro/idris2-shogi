@@ -1,6 +1,7 @@
 module Shogi.Row
 
 import Data.Vect
+
 import Shogi.Piece
 
 %default total

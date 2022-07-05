@@ -2,6 +2,7 @@ module Shogi.Reverse
 
 import Data.Fin.Extra
 import Data.Vect
+
 import Shogi.Board
 import Shogi.Color
 import Shogi.Column

@@ -1,8 +1,6 @@
 module Shogi.Rank
 
-import Data.Fin
-
-import Shogi.Color
+import public Data.Fin
 
 %default total
 
@@ -10,13 +8,13 @@ public export
 data Rank = MkRank (Fin 9)
 
 export
+toFin : Rank -> Fin 9
+toFin (MkRank r) = r
+
+export
 Eq Rank where
-  (MkRank r) == (MkRank r') = r == r'
+  (==) = (==) `on` toFin
 
 export
 Ord Rank where
-  compare (MkRank r) (MkRank r') = compare r r'
-
-export
-toFin : Rank -> Fin 9
-toFin (MkRank r) = r
+  compare = compare `on` toFin
